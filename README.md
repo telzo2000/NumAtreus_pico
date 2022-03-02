@@ -4,6 +4,9 @@ I got a chance from the NumAtreus designer, so I took on the challenge.
 <br>
 NumAtreus作者からチャンスをもらったので、チャレンジしました。
 <br>
+https://twitter.com/yohewi/status/1496989338265350144
+
+
 Store prk_firmware and kmk_firmware here.
 <br>
 ここにprk_firmwareとkmk_firmwareを保管します。
