@@ -25,4 +25,9 @@ We will fix it in the future.
 <br>
 将来的には修正します。
 <br>
+I also tried PRK for VIA (0.9.12), but I don't feel the stability of operation.
+<br>
+VIA用PRK（0.9.12）も試してみましたが、動作の安定さを感じていません。
+<br>
+
 
