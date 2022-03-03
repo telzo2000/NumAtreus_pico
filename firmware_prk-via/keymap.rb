@@ -30,6 +30,7 @@ kbd.add_layer :lower, %i[
     KC_Z    KC_X    KC_C        KC_V      KC_B     LOWER_SPC  KC_N      KC_M      KC_LBRC  KC_RBRC  KC_SPACE 
     KC_LSFT KC_LGUI KC_LCTL     KC_LALT   raise    KC_SPACE  lower   KC_1     KC_2      KC_3     KC_BSPACE
 ]
+via = VIA.new
 #                   Your custom     Keycode or             Keycode (only modifiers)      Release time      Re-push time
 #                   key name        Array of Keycode       or Layer Symbol to be held    threshold(ms)     threshold(ms)
 #                                   or Proc                or Proc which will run        to consider as    to consider as
@@ -39,12 +40,17 @@ kbd.define_mode_key :GUI_X,       [ :KC_X,                 :KC_LGUI,            
 kbd.define_mode_key :RAISE_N,     [ :KC_N,                 :raise,                       150,              150 ]
 kbd.define_mode_key :LOWER_SPC,   [ :KC_SPACE,             :lower,                       150,              150 ]
 
+via.layer_count = 6
+via.row_size = 11
+via.col_size = 4
+
 # `before_report` will work just right before reporting what keys are pushed to USB host.
 # You can use it to hack data by adding an instance method to Keyboard class by yourself.
 # ex) Use Keyboard#before_report filter if you want to input `":" w/o shift` and `";" w/ shift`
-#kbd.before_report do
-#  kbd.invert_sft if kbd.keys_include?(:KC_SCOLON)
+kbd.before_report do
+  kbd.invert_sft if kbd.keys_include?(:KC_SCOLON)
 #  # You'll be also able to write `invert_ctl`, `invert_alt` and `invert_gui`
 #end
 
+kbd.append via
 kbd.start!
