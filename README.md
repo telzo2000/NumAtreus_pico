@@ -25,9 +25,11 @@ We will fix it in the future.
 <br>
 将来的には修正します。
 <br>
-Row2Col also solved the problem with the Relation between init_pins and init_matrix_pins method in the keyscan-matrix.md description of prk_firmware-wiki.
 <br>
-Row2Colでも、prk_firmware-wikiのkeyscan-matrix.mdの記述中にある、Relation between init_pins and init_matrix_pinsの方法で問題が解決しました。
+Row2Col also solved the problem with the Relation between init_pins and init_matrix_pins method in the [keyscan-matrix.md](https://github.com/telzo2000/prk_firmware-wiki/blob/master/Keyscan-matrix.md) description of prk_firmware-wiki.
+<br>
+Row2Colでも、[prk_firmware-wikiのkeyscan-matrix.md](https://github.com/telzo2000/prk_firmware-wiki/blob/master/Keyscan-matrix.md)の記述中にある、Relation between init_pins and init_matrix_pinsの方法で問題が解決しました。
+<br>
 <br>
 I also tried PRK for VIA (0.9.12), but I don't feel the stability of operation.
 <br>
