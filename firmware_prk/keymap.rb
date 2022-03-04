@@ -26,7 +26,7 @@ kbd.init_matrix_pins(
 # -------------------------------                  ------------------------------- 
 # |  A  |  S  |  D  |  F  |  G  |         |        |  H  |  J  |  K  |  L  |Enter|
 # -------------------------------------------------------------------------------- 
-# |  Z  |  X  |  C  |  V  |  B  |LOWER_SPC|KC_SPACE|  N  |  M  |  ,  |  .  |  /  |
+# |  Z  |  X  |  C  |  V  |  B  |KC_SPACE |SFT_SPC|  N  |  M  |  ,  |  .  |  /  |
 # --------------------------------------------------------------------------------
 # |LSFT |LCTRL|LGUI |LALT |raise|         |        |lower|  1  |  2  |  3  |  BS |
 # --------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ kbd.init_matrix_pins(
 kbd.add_layer :default, %i[
   KC_Q    KC_W    KC_E        KC_R      KC_T      KC_NO              KC_Y      KC_U     KC_I      KC_O     KC_P      
   KC_A    KC_S    KC_D        KC_F      KC_G      KC_NO              KC_H      KC_J     KC_K      KC_L     KC_ENTER
-  KC_Z    KC_X    KC_C        KC_V      KC_B      KC_SPACE           KC_N      KC_M     KC_COMMA  KC_DOT   KC_SLASH
+  KC_Z    KC_X    KC_C        KC_V      KC_B      SFT_SPC           KC_N      KC_M     KC_COMMA  KC_DOT   KC_SLASH
   KC_LSFT KC_LCTL KC_LGUI     KC_LALT   KC_RAISE  KC_SPACE           KC_LOWER  KC_1     KC_2      KC_3     KC_BSPACE
 ]
 kbd.add_layer :raise, %i[
@@ -55,7 +55,8 @@ kbd.add_layer :lower, %i[
 #                                   or Proc                or Proc which will run        to consider as    to consider as
 #                                   when you click         while you keep press          `click the key`   `hold the key`
 kbd.define_mode_key :KC_RAISE,     [ :raise,                 :raise,                       150,              150 ]
-kbd.define_mode_key :KC_LOWER,     [ :lower,             :lower,                       150,              150 ]
+kbd.define_mode_key :KC_LOWER,     [ :lower,                 :lower,                       150,              150 ]
+kbd.define_mode_key :SFT_SPC,      [ :KC_SPACE,              :KC_LSFT,                     150,              150 ]
 
 # `before_report` will work just right before reporting what keys are pushed to USB host.
 # You can use it to hack data by adding an instance method to Keyboard class by yourself.
